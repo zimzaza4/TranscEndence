@@ -185,8 +185,8 @@ public class ZotOverloader extends SimpleSlimefunItem<BlockTicker> implements In
                             if (zotCharge == requiredCharge - 1) {
                                 menu.replaceExistingItem(zotSlot, getZot(zotSpin));
                             } else {
-                                zotMeta.setLore(Arrays.asList("&9Concentrated matter",
-                                    "&7Charge: " + ChatColor.YELLOW + ++zotCharge + "/" + requiredCharge));
+                                zotMeta.setLore(Arrays.asList("&9浓缩物",
+                                    "&7负载: " + ChatColor.YELLOW + ++zotCharge + "/" + requiredCharge));
                             }
 
                             PersistentDataAPI.setInt(zotMeta, chargeKey, zotCharge);
@@ -224,11 +224,11 @@ public class ZotOverloader extends SimpleSlimefunItem<BlockTicker> implements In
     }
 
     private ItemStack getZot(String zotSpin) {
-        if (zotSpin.compareTo("Up") == 0) {
+        if (zotSpin.compareTo("向上") == 0) {
             return ZOT_UP_2;
-        } else if (zotSpin.compareTo("Down") == 0) {
+        } else if (zotSpin.compareTo("向下") == 0) {
             return ZOT_DOWN_2;
-        } else if (zotSpin.compareTo("Left") == 0) {
+        } else if (zotSpin.compareTo("向左") == 0) {
             return ZOT_LEFT_2;
         }
         return ZOT_RIGHT_2;
